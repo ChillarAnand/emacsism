@@ -1,3 +1,0 @@
-# Chapter 3
-
-Write here...
