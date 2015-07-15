@@ -254,25 +254,24 @@ As explained in previous chapter, Emacs can be used for all sorts of things. The
 There is no need to switch between various applications as I can do most of the things in Emacs.
 
 
-### Play `the dark knight` movie.
+### 2. Play the dark knight movie.
 
 Lets us assume movie is located in `/home/anand/videos/movies/english/dark-knight/`.
 
 **Without Emacs:** First I have to open a file manager. By default, it will show home folder `/home/anand`. Now I have to go to `videos`, then `movies`, then `english`, then `dark-knight` and double click the video file. This video will be opened in some media player.
 
-**With Emacs:** Since I am using [singularity][], if I just press `fj drk`, Emacs shows me with the relevant video file `dark-knight.mkv`. Now if I just press enter, it will open in a media player.
+**With Emacs:** Since I am using [singularity](#singularity), if I just press `fj drk`, Emacs shows me with the relevant video file `dark-knight.mkv`. Now if I just press enter, it will open in a media player.
 
 By using Emacs I will be able to access any file in the operating system with very little effort.
 
 
-Task 3: Indent code while creating a github issue.
+### 3. Indent code while creating a github issue.
 
-Without Emacs: While creating a github issue if I want a piece of text to be recognised as code, I need to do proper indentation. So I have to manually indent those lines. Alternatively, I can copy that text to IDE, indent there and then copy back.
+**Without Emacs:** While creating a github issue if I want a piece of text to be recognised as code, I need to do proper indentation. So I have to manually indent those lines. Alternatively, I can copy that text to IDE, indent there and then copy back.
 
-Emacs has a package which provides an interface to edit text areas directly in Emacs. So, I by calling a single function, I can easily format code part.
+**With Emacs:** Emacs has a package which provides an interface to edit text areas directly in Emacs. So, I by calling a single function, I can easily format code part.
 
-Since Emacs acts as an interface, I will have entire power of Emacs for any task.
-
+Since Emacs acts as an interface, the entire power of Emacs will be available for any task.
 
 
 These are just a few examples. You can checkout wide variety of packages available for various things for more. 
@@ -386,7 +385,7 @@ You can define Your own commands which does selection narrowing on any items You
 ## Level 3: Singularity
 
 > `Emacs singularity` is a hypothetical function, which is capable of doing anything!!
-
+ 
 Singularity is a higher order of selection narrowing. In previous section, I have selected one command & I have used selection narrowing for the argument. In addition to arguments, I can even do selection narrowing on commands. In addition to performing selection narrowing individually on arguments or commands, I can do selection narrowing on a combination of command & argument. This is where singularity comes into picture.
 
 Lets see how some general actions that are performed in Emacs.
