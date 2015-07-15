@@ -1,9 +1,13 @@
 # Acknowledgements
 
-I would like to thank [Krace Kumar](http://www.kracekumar.com), [Arun Ravindran](http://arocks.com), [Jorgen Shaefaer](http://www.jorgenschaefer.de/) for helping me to understand Emacs.
+I would like to thank [Krace Kumar](http://www.kracekumar.com)[^1], [Arun Ravindran](http://arocks.com)[^2], [Jorgen Shaefaer](http://www.jorgenschaefer.de/)[^3] for helping me to understand Emacs.
 
-I would like to thank [Steve Purcell](http://www.sanityinc.com/) for helping me with Emacs package development.
+I would like to thank [Steve Purcell](http://www.sanityinc.com/)[^4] for helping me with Emacs package development.
 
+[^1]: http://www.kracekumar.com
+[^2]: http://arocks.com
+[^3]: http://www.jorgenschaefer.de
+[^4]: http://www.sanityinc.com
 
 # Prologue
 
