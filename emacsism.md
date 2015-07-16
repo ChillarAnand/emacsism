@@ -186,50 +186,55 @@ Pretty neat, huh? Since it is completely distraction less, You can visually conc
 
 Most IDE's use tabs to hold files when a file is opened. One serious disadvantage is it doesn't scale well. If You open more than 10 files, the bar that shows file names will get clogged. It becomes quite difficult to switch between files.
 
-Emacs uses something called "buffer" to hold files/text. Every time a file is opened or a process is started, a buffer is used to hold text. Buffers can scale to any extent. You can open million files at a time and You can switch to any file with just few key presses.
+Emacs uses something called "buffer" to hold files/text. Every time a file is opened or a process is started, a buffer is used to hold text. Buffers can scale to very large extent. You can open thousands of files and You can switch to any file with just few key presses.
 
 
 ## Extensibility
 
 Extensibility lies at the heart of Emacs. What I mean by extensibility is
 
-* end user should be able to change any piece of editor
-* editor should have the ability to add new functionality, without affecting its internal structure and data flow
+* End user should be able to change any piece of editor
+* Editor should have the ability to add new functionality, without affecting its internal structure and data flow
 
-For example, most editors have fuzzy search to find files in a project. Fuzzy search is awesome. If You have several projects, it would be great if You could fuzzy search project names also. If You are not using Emacs, try to implement this in Your editor and see how it goes. In Emacs, it is as easy as calling an existing function with a different variable. Same thing applies to most other features also. With few lines of code, You can customize/extend it, the way You want it. 
+For example, most editors have fuzzy search to find files in a project. Fuzzy search is awesome. If You have several projects, it would be great if You could fuzzy search project names also. If You are not using Emacs, try to implement this in Your editor and see how it goes.
+
+In Emacs, it is as easy as calling an existing function with a different variable. Same thing applies to most other features also. With few lines of code, You can customize/extend any piece of it the way You want it. 
 
 
 ## Composability
 
 Composability refers to inter-relationships of components. In Emacs, every component can be selected and assembled in various combinations as per user requirements.
 
-If we take previous example of fuzzy search, most editors combine two pieces to achieve it. They combine `fuzzy search` code with `open file` code. So You can `search` for a file and then press enter which `opens` the file. Now instead of `opening` the file, lets say You have to `rename` it or `delete` it. Its not possible.
+If we take previous example of fuzzy search, most editors combine two pieces to achieve it. They combine `fuzzy search` code with `open file` code. So You can `search` for a file and then press enter, it `opens` the file. Now after searching for a file, instead of `opening` the file, lets say You have to `rename` it or `delete` it. Its not possible.
 
-In Emacs, once You `searched` for a file, You can perform any action on it. You can open it, rename it, delete it or You can define Your own function to do something else. This composability helps a lot to either modify existing features or define new features with very few lines of code.
+In Emacs, once You `searched` for a file, You can perform any action on it. You can open it, rename it, delete it or You can define Your own function to do something else.
 
+This composability helps a lot to either modify existing features or define new features with very few lines of code.
 
 
 ## DWIM
 
-Emacs has quite a few DWIM(Do What I Mean) functions. These functions will try to do the right thing instead of blindly executing user's input by programmatically responding to past actions and document state. This reduces number of keystrokes a user has to use for a particular task.
+Emacs has quite a few DWIM(Do What I Mean) functions. Instead of blindly executing user's input, these functions will try to do the right thing by programmatically responding to past actions and/or document state. This reduces number of keystrokes a user has to use for a particular task.
 
-For example, if cursor is at code and if I execute the function comment-dwim-2 twice, it tries to insert an inline comment. On the other hand, if I call the function once, go around the file, comeback and call the function again, it uncomments the line instead of inserting an inline comment.
+A simple example is `comment-dwim-2`[^1]. This function based on past cursor movement & context, figures out whether user is trying to comment a piece of code or inserting an inline comment or uncommenting a piece of code and responds accordingly.
 
-
+[^1]: https://github.com/remyferre/comment-dwim-2
 
 ## Replication
 
-To customize an IDE, You have to clicking menus/checkboxes. If You are using IDE, You might also need terminal or terminal multiplexer. You might have some custom configuration for terminals tool. You might even need some other third party tools for Your development environment.
+To customize an IDE, You have to click menus/checkboxes. If You are using IDE, You might also need terminal or terminal multiplexer. You might have some custom configuration for terminal tools also. You might even need some other third party tools for Your development environment.
 
 Consider some situation where You have to
 
-* reinstall Your OS
-* using multiple machines for development
-* using friends system for some bug fixing or development
+* Reinstall Your OS
+* Use multiple machines for development
+* Use friends system for some quick bug fixing
 
 In these situations, You need a lot of time just to replicate Your development environment.
 
-To customize Emacs, You have to write some code instead of clicking menus/checkboxes. You can keep Your dot files in version control. In above situations I have mentioned, replicating Your environment is as easy as cloning Your Emacs config and restarting Emacs. You can replicate Your development environment in just few minutes.
+If You are using emacs, You will be using it for most of the tasks. To customize Emacs, You have to write some code(which is a good thing) instead of clicking menus/checkboxes. You can keep all Your config in dot files and use a version control to manage it.
+
+In above situations I have mentioned, replicating Your environment is as easy as cloning Your Emacs config and restarting Emacs. You can replicate Your development environment in just few minutes.
 
 
 # Why Editor War Is Stupid
