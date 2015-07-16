@@ -9,6 +9,12 @@ I would like to thank [Steve Purcell](http://www.sanityinc.com/)[^4] for helping
 [^3]: http://www.jorgenschaefer.de
 [^4]: http://www.sanityinc.com
 
+
+
+
+
+
+
 # Prologue
 
 Emacs is originally written in 1976. It has been almost 60 years since it came into picture and yet none of the latest & advanced softwares weren't able to replace it.
@@ -16,6 +22,8 @@ Emacs is originally written in 1976. It has been almost 60 years since it came i
 There is something magnificient about Emacs by which it is able to draw users to use it, develop it further and form a cult around it through out all these years. It is one of the longest lived programming applications in the history of computers. 
 
 You might have read a lot of flattery about Emacs. If You try and learn Emacs for a while(may be few weeks to few months), You will realize that the flattery is actually true and everything You have read is very less when compared to what Emacs is actually capable of.
+
+
 
 
 
@@ -40,6 +48,9 @@ This little book is created to share those things. This book
 Explaining how to use Emacs itself is beyond the scope of this book.
 
 
+
+
+
 # Cautions
 
 
@@ -58,12 +69,14 @@ I am neither a professional writer nor an expert in Emacs. I just tried to put m
 
 
 
+
+
 # Lisp
 
 Emacs is written in a programming language called Emacs-lisp(a variant of lisp). There were some attempts to port Emacs to other languages. But none of them were successful because those programming languages weren't as powerful as lisp there by loosing all the power of Emacs. So, before diving into the Emacs, it is good to have a brief introduction to Lisp features and see how it differs from traditional languages (like C, Python, Perl e.t.c).
 
 
-### Expressions
+## Expressions
      
 Lisp is an expression-oriented programming language which means almost everything is an expression. Hello world in Lisp looks like this
 
@@ -96,7 +109,7 @@ The above expression
 (if (> y z) (+ x y) (+ x z))
 ```
 
-Can also be written as
+can also be written as
 
 ```commonlisp
 (+ x (if (> y z) y z))
@@ -105,19 +118,19 @@ Can also be written as
 Lisp by making everything an expression expands possibilites to combine parts of language in unusual ways.
 
 
-### Evaluation
+## Evaluation
 
 Syntax is the set of rules which define the combinations of symbols that are considered to be a correctly structured document. Programming languages like C, Python and Markup languages like HTML, XML, Tex have their own syntax
 
 Lisp hardly has any syntax at all. Everything is an expression. Every expression can be evaluated. If you don't want it evaluated, you put a quote on it. That's it.
 
 
-### Availability
+## Availability
 
 Traditional programming language have read time, compile time & run time. In Lisp, the whole language is always available. There is no real distinction between read-time, compile-time, and runtime. You can compile or run code while reading, read or run code while compiling, and read or compile code at runtime.
 
 
-### Extensibility
+## Extensibility
 
 Macro is a piece of code which treats code as data and generates new code. Macros will be used by compiler to generate code that will be compiled just before its evaluation. Most programming languages are not capable of this manipulation, they advise not use this kind of stuff. For example, consider a simple macro in C language.
 
@@ -133,6 +146,7 @@ Imagine how difficult it is to add new syntax to traditional languages like Pyth
 
 These features set Lisp apart from traditional languages. 
 
+
 ### References
 
 http://gigamonkeys.com/book/
@@ -140,6 +154,9 @@ http://gigamonkeys.com/book/
 http://www.paulgraham.com/diff.html
 
 http://practicaltypography.com/why-racket-why-lisp.html
+
+
+
 
 
 
@@ -152,7 +169,15 @@ In this chapter, lets see some of Emacs features by comparing Emacs with other e
 
 If You look at typical IDE, its layout looks like this.
 
+![alt ide][ide]
+
+[ide]: https://cloud.githubusercontent.com/assets/4463796/8724470/7b7464e2-2bed-11e5-9e90-43b0cc634cbc.png
+
 Some IDE's have more components than this. Here is the screenshot of Emacs as I am writing this book.
+
+![alt emacs][emacs]
+
+[emacs]: https://cloud.githubusercontent.com/assets/4463796/8724469/7b6c6b7a-2bed-11e5-8b7c-3017244a8c1a.png
 
 Pretty neat, huh? Since it is completely distraction less, You can visually concentrate on getting things done :D
 
