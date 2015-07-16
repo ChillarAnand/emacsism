@@ -280,15 +280,23 @@ Basically, You will keep it open 24/7 and live inside it.
 I think comparing both of them is kind of stupid. If we want to compare two things, they have to be atleast in the same category. There is no point in comparing a chair and a projector.
 
 
+
+
+
+
+
+
+
+
 # Why Use Emacs For Everything?
 
-As explained in previous chapter, Emacs can be used for all sorts of things. There are many advantages of using Emacs everywhere. Lets see some examples to understand why it be beneficial.
+As explained in previous chapter, Emacs can be used for all sorts of things. There are many advantages of using Emacs everywhere. Lets take a look at some examples.
 
 ## 1. Write a python script to update table in MySQL.
 
-**Without Emacs:** For writing Python code, I will be using IDE. Sine I dont know how to update table in MySQL, I have to open browser, go to stackoverflow, search for it and find relevant code. Then open a terminal, create a mysql process and test the query. Once I know that is working fine, I have to go back to editor and use that query in script.
+**Without Emacs:** For writing Python code, I will be using IDE. Sine I dont know how to update table in MySQL, I have to open browser, go to stackoverflow, search for it and find relevant code. Then I have to open a terminal, create a mysql process and test the query. Once I know that it is working fine, I have to go back to editor and use that query in script.
 
-**With Emacs:** Emacs has stackexchange client. So I can search for something in stack exchange websites from Emacs. When I get the results, I can select relevant code and then send that directly to MySQL process which is running in Emacs. If that code works, I can go to python script file and use it.
+**With Emacs:** Emacs has stackexchange client. So I can search for it in stackoverflow from Emacs. When I get the results, I can select relevant code and then send that directly to MySQL process which is running in Emacs. If that code works, I can switch back to python script and paste it.
 
 There is no need to switch between various applications as I can do most of the things in Emacs.
 
@@ -324,11 +332,20 @@ These are just a few examples. You can checkout wide variety of packages availab
 
 One of major problems with Emacs is that users need to use modifier keys[Shift, Ctrl,  Alt/Meta, Super] repetetively. If we look at the key board laYout, `Ctrl` is placed at the corners. `Ctrl` is the most used modifier key in Emacs. Everytime we  need to press it, we have to stretch our little finger all the way to the corner or move the hand, both of them are not ergonomic/convinient.
 
-To avoid that problem, it is a customary practice to bind caps lock to ctrl. this solves the problem to an extent. If I have to press `C-c C-e`, I have to hold `caps lock` with little finger, and then press `c` & `e` with any remaining fingers. An alternate solution is to use `right control key` with right little finger and press `c` & `e` which takes back to the previous problem. Also if we look at strength of our fingers, thumb stands and the top, little finger at bottom and remaining fingers somewhere in the middle. So binding caps lock to control doesn't solve the problem ergonomically.
+To avoid that problem, it is a customary practice to bind caps lock to ctrl. this solves the problem to an extent. If I have to press `C-c C-e`, I have to hold `caps lock` with little finger, and then press `c` & `e` with any remaining fingers. An alternate solution is to use `right control key` with right little finger and press `c` & `e` which takes back to the previous problem.
+
+Also if we look at strength of our fingers, thumb stands and the top, little finger at bottom and remaining fingers somewhere in the middle. So binding caps lock to control doesn't solve the problem ergonomically.
 
 ### Escaping Ctrl
 
-one of the mind blowing idea that solves this problem is using space as space and ctrl. Yes, You read it correctly. There some packages that modify space to act as space if You press it and leave & it will act as ctrl if You press and hold it. This might seem bizzare at first but once You get used to the idea, it feels real good. Once You do this, there is no need to touch ctrl key in Your life time.
+One of the best solution for this problem is using `space` as `space` and `ctrl`. For Ubuntu, there is a package called [space2ctrl]()[^1] that modifies space to act as
+
+* Space if You press it and leave
+* Ctrl if You press and hold it.
+
+This might seem bizzare at first but once You get used to the idea, it will be very useful. Once You do this, there is no need to touch ctrl key in Your life time.
+
+[^1]:
 
 ### Escaping Shift
 
@@ -336,41 +353,28 @@ Lets look at some common situations where we use shift most and how to avoid it 
 
 #### Special characters:
 
-the usage of symbols is more than that of numbers in programming(atleast for me).if You are using Emacs for programming, You can use this snippet to interchange symbols and numbers. also You can use numeric keypad for numbers.
-
-    (defun switch-numbers-symbols ()
-      "Bind symbols to digits."
-      (interactive)
-      (define-key key-translation-map (kbd "!") (kbd "1"))
-      (define-key key-translation-map (kbd "@") (kbd "2"))
-      (define-key key-translation-map (kbd "#") (kbd "3"))
-      (define-key key-translation-map (kbd "$") (kbd "4"))
-      (define-key key-translation-map (kbd "%") (kbd "5"))
-      (define-key key-translation-map (kbd "^") (kbd "6"))
-      (define-key key-translation-map (kbd "&") (kbd "7"))
-      (define-key key-translation-map (kbd "*") (kbd "8"))
-      (define-key key-translation-map (kbd "(") (kbd "9"))
-      (define-key key-translation-map (kbd ")") (kbd "0")))
-   (switch-numbers-symbols)
+The usage of symbols is more than that of numbers in programming(atleast for me). If You are using Emacs for programming, there is a snippet to interchange symbols and numbers. By this number of times to press shift will be reduced a lot.
     
 #### Capitalize Words
 
-if You are writing a book or documenting something, You need to capitalize words after a sentence/paragraph, always capitilize few characters/words. You can use auto capitalize package mode which automatically does that for You.
+If You are writing a book or documenting something, You need to capitalize words after a sentence/paragraph, always capitilize few characters/words e.t.c. You can use auto capitalize package mode which automatically does that for You.
 
 #### Casing Words
 
-based on the programming language, You have to case the identifiers(as per language - snake case for python, camel case for java, capitalized keywords for SQL). Emacs has a package called electric-case which automatically does that for You. If You are using Emacs for SQL database access, there is a package called sql-up mode, which automatically upcases SQL keywords.
+Based on the programming language, You have to case the identifiers(as per language - snake case for python, camel case for java, capitalized keywords for SQL). Emacs has a package called electric-case which automatically does that for You. If You are using Emacs for SQL database access, there is a package called sql-up mode, which automatically upcases SQL keywords.
 
+You can find many other packages based on Your requirements.
 
 ### Escaping Meta/Alt
 
-I don't see any problem with using meta. However if You are willing to rebind, You can do it. Most of the times meta is used only to invoke `M-x`. There is a package called [key-chord](http://www.Emacswiki.org/Emacs/key-chord.el) which lets You to rebind any key combination to any two keys pressed automatically. So You can rebind `M-x` to `m-x`.
+I don't see any problem with using meta since I am using thumb to press it. However if You are willing to rebind, You can do it. Most of the times meta is used only to invoke `M-x`. There is a package called [key-chord](http://www.Emacswiki.org/Emacs/key-chord.el)[^1] which lets You to rebind any key combination to any two keys pressed automatically. So You can rebind `M-x` to `m-x`.
 
 I do recommend using key-chord, to rebind most used key bindings. It saves a lot of key presses, instead of typing `C-c C-p r` everytime, You can just press `p-r`(or any other keys which feel intuitive for You).
 
-Whatever I have explained so far is Emacs part of less-keys project. Less-keys is a project I have started to minimize the number of keys and key presses to interact with computer.
 
+Whatever I have explained so far is Emacs part of less-keys project. Less-keys is a project I have started to minimize the number of keys and key presses to interact with computer to overcome RSI.
 
+[^1]: http://www.Emacswiki.org/Emacs/key-chord.el
 
 
 
@@ -401,11 +405,11 @@ If I use `zsh` instead of `bash`, I will get autocompletion for the path `/home/
 
 ## Level 2: Selection Narrowing
 
-To move further, I can use a plugin called `jump` on top of `zsh`. By this, I can run `j Emacsism` on terminal, which takes me directly to that directory. This plugin uses selection narrowing and I type some name, it tries to narrow down all available options. So instead of typing `j Emacsism` I can just type `j ism` which takes me to `Emacsism` as `ism` is unique to that directory. Thus selection narrowing tries to narrow down all available options based on user input.
+If I use a plugin called `jump` on top of `zsh`, I can use selection narrowing for path. By this, I can run `j Emacsism` on terminal, which takes me directly to that directory. Since it uses selection narrowing, I don't even need to type entire folder name. So instead of typing `j Emacsism` I can just type `j ism` which takes me to `Emacsism` as `ism` is unique to that directory. Thus selection narrowing tries to narrow down all available options based on few characters given by user.
 
-This selection narrowing greatly improves productivity. However the method explained above is NOT interactive. Consider a case where You have two directories `Emacsism1` and `Emacsism2`. Now if I run `j ism` it will take me to most visited of `Emacsism1` & `Emacsism2`.
+This selection narrowing greatly improves productivity. However the method explained above is **not** interactive. Consider a case where I have two directories `Emacsism1` and `Emacsism2`. Now if I run `j ism` it will take me to recent visited of `Emacsism1` & `Emacsism2`.
 
-On the other other hand Emacs selection narrowing(using Helm) is interactive. To change a directory in Emacs, I will call a command which is responsible for changing directories. By default it shows all the options so that I can navigate through them. If I type `i`, it narrows all the directories whose path has `i` in them. If I type `ism`, it filters down to two directories `Emacsism1` & `Emacsism2`. Thus by having interactive selection narrowing, Emacs will steer in the right direction.
+On the other other hand Emacs selection narrowing(using Helm) is interactive. To change a directory in Emacs, I will call a command which is responsible for changing directories. By default it shows all the options so that I can navigate through them. If I type `i`, it narrows all the directories whose path has `i` in them. If I type `ism`, it filters down to two directories `Emacsism1` & `Emacsism2` and I can select any one. Thus by having interactive selection narrowing, Emacs will steer in the right direction.
 
 Selection narrowing is not just limited to switching directories in Emacs. You can use it for anything.
 
@@ -425,7 +429,9 @@ You can define Your own commands which does selection narrowing on any items You
 
 > `Emacs singularity` is a hypothetical function, which is capable of doing anything!!
  
-Singularity is a higher order of selection narrowing. In previous section, I have selected one command & I have used selection narrowing for the argument. In addition to arguments, I can even do selection narrowing on commands. In addition to performing selection narrowing individually on arguments or commands, I can do selection narrowing on a combination of command & argument. This is where singularity comes into picture.
+Singularity is a higher order of selection narrowing. In previous section, I have used selection narrowing for one set of options. To take if further, I can do selection narrowing on anything(buffers, files, commands, dirs, bookmarks).
+
+selected one command & I have used selection narrowing for the argument. In addition to arguments, I can even do selection narrowing on commands. In addition to performing selection narrowing individually on arguments or commands, I can do selection narrowing on a combination of command & argument. This is where singularity comes into picture.
 
 Lets see how some general actions that are performed in Emacs.
 
@@ -460,7 +466,7 @@ If I want to go to a file called `test.py` in some project, I have to run `fj <f
 
 If I want to install a package in Emacs, I have to run `fj ins <package-name>`(no need to type `package-install` as I am using selection narrowing). Commands will be narrowed down to `package-install` after typing `ins`.
 
-Since singularity is capable of doing anything, it becomes much easier to interact with Emacs with very very few keys. I have made singularity as a package, You can get it from here.
+Since singularity is capable of interacting with large set of options, it becomes much easier to interact with Emacs with very very few keys. 
 
 
 
@@ -471,13 +477,20 @@ Since singularity is capable of doing anything, it becomes much easier to intera
 
 # Epilogue
 
-There was an ancient mysterious wall(Emacs) which stood at the edge of a village, and whenever anyone climbed the wall to look onto the other side, instead of coming back he or she smiled and would jump to the other side, never to return. The inhabitants of the village became curious as to what could draw these people to the other side of the wall. 
+I would like to conclude this with a zen story by Osho which relates to emacs.
 
-After all, their village had all the necessities(IDE's and other software) of living a comfortable life. They made an arrangement to where they would tie a person's feet, so that when he or she looked over and wished to jump, they could be pulled back. The next time someone tried to climb the wall to see what was on the other side, they chained her feet so that she could not go over. She looked on the other side and was delighted at what she saw(lisp enlightment), and smiled. Those standing below grew curious to question her and pulled her back, but to their great disappointment she had lost the power of speech.
+
+## The Mysterious Wall
+
+There was an ancient mysterious wall(Emacs) which stood at the edge of a village, and whenever anyone climbed the wall to look onto the other side, instead of coming back he or she smiled and would jump to the other side, never to return.
+
+The inhabitants of the village became curious as to what could draw these people to the other side of the wall. After all, their village had all the necessities(IDE's and other software) of living a comfortable life.
+
+They made an arrangement to where they would tie a person's feet, so that when he or she looked over and wished to jump, they could be pulled back. The next time someone tried to climb the wall to see what was on the other side, they chained her feet so that she could not go over.
+
+She looked on the other side and was delighted at what she saw(lisp enlightment), and smiled. Those standing below grew curious to question her and pulled her back, but to their great disappointment she had lost the power of speech.
 
 "Those who have seen cannot say. That which has been seen cannot be painted, cannot be reduced to words. But still each one has to give a try - and the world goes on becoming more and more beautiful because of these efforts." 
-
-- Osho
 
 
 Happy Emacsing & Lisping!!
