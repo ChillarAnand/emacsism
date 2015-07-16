@@ -241,9 +241,14 @@ In above situations I have mentioned, replicating Your environment is as easy as
 
 Both Emacs and Vim has cult following and they are the longest lived programming applications of all time. Both groups insist that their editor is best. This has led to many flame wars and lots of jokes about both.
 
-Vim is a superior editor and is far better than many editors out there. Most of the systems have Vim pre-installed and You can use Vim with same commands on any system. You can quickly open a file, make bunch of changes and close it.
+## Vim
 
-Eventhough Emacs is commonly known as text editor, it an extensible computing environment. It is an extensible editor. So You can use Emacs as
+Vim is a superior **text editor** and is far better than many editors out there. Most of the systems have Vim pre-installed and You can use Vim with same commands on any system. You can quickly open a file, make bunch of changes and close it.
+
+
+## Emacs
+
+Eventhough Emacs is commonly known as text editor, it is somewhat misleading. Emacs is an **extensible computing environment**. So You can use Emacs as
 
 * Mail Client
 * Document Viewer
@@ -252,7 +257,7 @@ Eventhough Emacs is commonly known as text editor, it an extensible computing en
 * Web Browser
 * Video Editor
 * Blog Editor
-* Paint
+* Paint(Yes, You can draw pics)
 * Spreadsheet
 * Todo List
 * Wiki
@@ -266,20 +271,20 @@ Eventhough Emacs is commonly known as text editor, it an extensible computing en
 * Web server
 * Lisp Interpreter
 * SQL client
+* Writing & Debugging code 
 
-
-and also writing, compiling & debugging code & thousands of other things.
+and thousands of other things.
 
 Basically, You will keep it open 24/7 and live inside it.
 
-I think comparing both of them is kind of stupid. If we want to compare tow things, they have to be atleast in the same category. There is no point in comparing a banana and a chicken.
+I think comparing both of them is kind of stupid. If we want to compare two things, they have to be atleast in the same category. There is no point in comparing a chair and a projector.
 
 
 # Why Use Emacs For Everything?
 
 As explained in previous chapter, Emacs can be used for all sorts of things. There are many advantages of using Emacs everywhere. Lets see some examples to understand why it be beneficial.
 
-### 1. Write a python script to update table in MySQL.
+## 1. Write a python script to update table in MySQL.
 
 **Without Emacs:** For writing Python code, I will be using IDE. Sine I dont know how to update table in MySQL, I have to open browser, go to stackoverflow, search for it and find relevant code. Then open a terminal, create a mysql process and test the query. Once I know that is working fine, I have to go back to editor and use that query in script.
 
@@ -288,7 +293,7 @@ As explained in previous chapter, Emacs can be used for all sorts of things. The
 There is no need to switch between various applications as I can do most of the things in Emacs.
 
 
-### 2. Play the dark knight movie.
+## 2. Play the dark knight movie.
 
 Lets us assume movie is located in `/home/anand/videos/movies/english/dark-knight/`.
 
@@ -299,7 +304,7 @@ Lets us assume movie is located in `/home/anand/videos/movies/english/dark-knigh
 By using Emacs I will be able to access any file in the operating system with very little effort.
 
 
-### 3. Indent code while creating a github issue.
+## 3. Indent code while creating a github issue.
 
 **Without Emacs:** While creating a github issue if I want a piece of text to be recognised as code, I need to do proper indentation. So I have to manually indent those lines. Alternatively, I can copy that text to IDE, indent there and then copy back.
 
