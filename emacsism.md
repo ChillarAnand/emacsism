@@ -4,11 +4,11 @@
 
 # Prologue
 
-Emacs is originally written in 1976. It has been almost 60 years since it came into picture and yet none of the latest & advanced softwares weren't able to replace it.
+Emacs was originally written in 1976. It has been almost 60 years since it came into the picture, and yet none of the latest and most advanced software have been able to replace it.
 
-There is something magnificient about Emacs by which it is able to draw users to use it, develop it further and form a cult around it through out all these years. It is one of the longest lived programming applications in the history of computers. 
+There is something magnificient about Emacs that draws people to use it, develop it further, and form a cult around it throughout all these years. It is one of the longest lived programming applications in the history of computers.
 
-You might have read a lot of flattery about Emacs. If You try and learn Emacs for a while(may be few weeks to few months), You will realize that the flattery is actually true and everything You have read is very less when compared to what Emacs is actually capable of.
+You might have read a lot of flattery about Emacs. If you try and learn Emacs for a while (maybe few weeks to few months), you will realize that the flattery is actually true. Everything you have read is much less than the actual capabilities of Emacs.
 
 
 
@@ -16,21 +16,21 @@ You might have read a lot of flattery about Emacs. If You try and learn Emacs fo
 
 # Why This Book?
 
-I was using PHP for server side programming & I was looking for a good IDE. I tried Sublime text, Eclipse & Vim for a while and settled for Vim. 
+I was using PHP for server-side programming, and I was looking for a good IDE. I tried Sublime Text, Eclipse, and Vim for a while, and I settled for Vim.
 
-After a year or so, I switched from PHP to Python. I found quite a few people in Python community were using something called Emacs.
+After a year or so, I switched from PHP to Python. I found that quite a few people in Python community were using something called Emacs.
 
-I started digging about Emacs and came across editor war. There were few articles which supported Vim and mentioned why Vim is better than Emacs in many aspects. So I was thought Vim is much better than Emacs. Even when I looked at statistics Vim is quite popular than Emacs. In addition to that I have already spent a year learning & customising Vim. So I wasn't ready to switch.
+I started digging about Emacs and came across the editor war. There were a few articles which supported Vim, covering why Vim is better than Emacs in many aspects. So I thought Vim was much better than Emacs. When I looked at statistics, Vim was more popular than Emacs. In addition, I had already spent a year learning and customising Vim. I wasn't ready to switch.
 
-Even though Emacs had a small user base, it had a cult following. In addition to that there were some good programmers in Python community who were using Emacs and they were recommending to use it. So I decided to try it out for a few weeks and figure out myself what's so great about Emacs.
+Even though Emacs had a smaller user base, it had a cult following. There were a few good programmers in Python community who used Emacs, and they recommended it. I decided to try it out for a few weeks to figure out for myself what's so great about Emacs.
 
-For a couple of weeks I have used it almost like a notepad. I started learning elisp & customising Emacs little bit. After a couple of months I was surprised when I realized that I was spending almost all the time in Emacs itself. Then I started wondering what made Emacs such a great text editor and understanding fundamentals(not basics) of Emacs.
+For a couple of weeks, I used it almost like a notepad. I started learning Elisp and I customized Emacs a little bit. After a couple of months, I was surprised to find that I was spending almost all the time in Emacs itself. I started wondering what made Emacs such a great text editor and understanding the fundamentals (not just the basics) of Emacs.
 
-This little book is created to share those things. This book
+This little book is created to share those things. This book:
 
-* Explains fundamentals of Emacs & how those fundamentals made Emacs different from other softwares.
+* Explains fundamentals of Emacs and how those fundamentals made Emacs different from other software.
 
-* Debunk few popular myths about Emacs like `Emacs users use a lot of modifier keys like CTRL, ALT`.
+* Debunks a few popular myths about Emacs such as `Emacs users use a lot of modifier keys like CTRL, ALT`.
 
 Explaining how to use Emacs itself is beyond the scope of this book.
 
@@ -43,16 +43,16 @@ Explaining how to use Emacs itself is beyond the scope of this book.
 
 ## About Emacs
 
-If You are a programmer and if You are looking for a piece of software which has features like syntax highligthing, autocompletion, debuggers e.t.c., which help to write & execute code, You can stop here and go for an IDE.
+If you are a programmer and if you are looking for software with features such as syntax highlighting, autocompletion, and debuggers to help you write and execute code, you can stop here and go for an IDE.
 
-If You are not satisfied with that, if You need something much simpler yet more powerful than IDE's and if You are looking for a divine editing experience, Emacs might help You!
+If you are not satisfied with that, if you need something much simpler yet more powerful than IDEs, and if you are looking for a divine editing experience, Emacs might help you!
 
-I see Emacs as an inward spiral. Once You start learning Emacs and realize the power of Emacs, You start spending more and more time within Emacs and it gets impossible to get out of Emacs. You have been warned!!
+I see Emacs as an inward spiral. Once you start learning Emacs and realizing the power of Emacs, you start spending more and more time within Emacs. It gets impossible to get out of Emacs. You have been warned!
 
 
 ## About Book
 
-I am neither a professional writer nor an expert in Emacs. I just tried to put my thoughts about Emacs on a paper. When I got struct in explaining something, I copied some ideas from few blog posts. Any mistakes are my own.
+I am neither a professional writer nor an expert in Emacs. I've just tried to put my thoughts about Emacs on a paper. When I got stuck in explaining something, I copied a few ideas from blog posts. Any mistakes are my own.
 
 
 
@@ -60,78 +60,61 @@ I am neither a professional writer nor an expert in Emacs. I just tried to put m
 
 # Lisp
 
-Emacs is written in a programming language called Emacs-lisp(a variant of lisp). There were some attempts to port Emacs to other languages. But none of them were successful because those programming languages weren't as powerful as lisp there by loosing all the power of Emacs. So, before diving into the Emacs, it is good to have a brief introduction to Lisp features and see how it differs from traditional languages (like C, Python, Perl e.t.c).
+Emacs is written in a programming language called Emacs Lisp, a variant of Lisp. There have been attempts to port Emacs to other languages, but none of them have been successful because those programming languages weren't as powerful as Lisp, thereby losing all the power of Emacs. Before diving into Emacs, it is good to have a brief introduction to Lisp features to see how it differs from traditional languages like C, Python, or Perl.
 
 
 ## Expressions
-     
-Lisp is an expression-oriented programming language which means almost everything is an expression. Hello world in Lisp looks like this
+
+Lisp is an expression-oriented programming language, which means almost everything is an expression. "Hello world" in Lisp looks like this:
 
 ```commonlisp
 (message "Hello, World!")
 ```
 
-To add `x` and greatest of `y`, `z`, we can use a **single** expression to do it.
+To add `x` and the higher value of either `y` or `z`, we can use a **single** expression to do it.
 
 ```commonlisp
 (if (> y z) (+ x y) (+ x z))
 ```
 
-That might look bit odd because lisp uses prefix notation.
-
-In a traditional programming language(like Python) it is not possible to do that in a single expression like this.
-
-```commonlisp
-x + (if y > z: y else: z)
-```
-
-Because those languages distinguish statements and expressions. A conditional statement(`if y>z: y else: z`) can't be used inside an expression(`x + something`).
-
-What's more interesting is, in Lisp, it is possible to compose same expressions in many ways.
-
-The above expression
-
-
-```commonlisp
-(if (> y z) (+ x y) (+ x z))
-```
-
-can also be written as
+That might look bit odd because Lisp uses prefix notation. What's more
+interesting is, in Lisp, it is possible to compose the same expression in
+many ways. The expression above can also be written as:
 
 ```commonlisp
 (+ x (if (> y z) y z))
 ```
 
-Lisp by making everything an expression expands possibilites to combine parts of language in unusual ways.
+That's because `(if ...)` is an expression, and it can be used inside other expressions.
+
+By making everything an expression, Lisp expands the possibilites for combining the parts of the language in unusual ways.
 
 
 ## Evaluation
 
-Syntax is the set of rules which define the combinations of symbols that are considered to be a correctly structured document. Programming languages like C, Python and Markup languages like HTML, XML, Tex have their own syntax
+The syntax is the set of rules which define the combinations of symbols that are considered to be a correctly structured document. Programming languages like C and Python and markup languages like HTML, XML, and TeX have their own syntax.
 
-Lisp hardly has any syntax at all. Everything is an expression. Every expression can be evaluated. If you don't want it evaluated, you put a quote on it. That's it.
+Lisp has hardly any syntax at all. Everything is an expression. Every expression can be evaluated. If you don't want it evaluated, add a quote to it. That's it.
 
 
 ## Availability
 
-Traditional programming language have read time, compile time & run time. In Lisp, the whole language is always available. There is no real distinction between read-time, compile-time, and runtime. You can compile or run code while reading, read or run code while compiling, and read or compile code at runtime.
+Traditional programming language have read-time, compile-time, and runtime. In Lisp, the whole language is always available. There is no real distinction between read-time, compile-time, and runtime. You can compile or run code while reading, read or run code while compiling, and read or compile code at runtime.
 
 
 ## Extensibility
 
-Macro is a piece of code which treats code as data and generates new code. Macros will be used by compiler to generate code that will be compiled just before its evaluation. Most programming languages are not capable of this manipulation, they advise not use this kind of stuff. For example, consider a simple macro in C language.
+A macro is a piece of code that treats code as data and generates new code. Macros are used by the compiler to generate code that will be compiled just before its evaluation. Most programming languages are not capable of this manipulation, or advise against using this technique. For example, consider a simple macro in the C language:
 
 ```c
 #define square(x)      x*x
 ```
 
-It is almost impossible to get it work in various contexts.
+It is almost impossible to get it work across all the different contexts where it could be called. It is also difficult (or even impossible) to modify the language itself in order to add new syntax. You would need to modify the grammar and the abstract syntax tree, and then recompile to get new syntax.
 
-Lisp never breaks any of macros in any situation.
+Lisp makes it easy to write reliable macros that can be used in different situations. People sometimes simplify their code by adding new features to Lisp through macros.
 
-Imagine how difficult it is to add new syntax to traditional languages like Python. We need to modify grammar, AST and then compile it to get new syntax. With lisp it is as easy as evaluating a macro.
-
-These features set Lisp apart from traditional languages. 
+These features set Lisp apart from traditional languages.
 
 
 ### References
@@ -149,54 +132,54 @@ http://practicaltypography.com/why-racket-why-lisp.html
 
 # Why Emacs?
 
-In this chapter, lets see some of Emacs features by comparing Emacs with other editors/IDE's. This is just to have better understanding of Emacs fundamental features. However note that Emacs is not just a text editor but it is an extensible computing environment.
+In this chapter, let's compare Emacs with other editors or IDEs so that we can have better understanding of the fundamental features of Emacs. Note that Emacs is not just a text editor, but an extensible computing environment.
 
 
 ## Real Estate
 
-If You look at typical IDE, its layout looks like this.
+If you look at a typical IDE, its layout looks like this:
 
 ![alt ide][ide]
 
 [ide]: https://cloud.githubusercontent.com/assets/4463796/8724470/7b7464e2-2bed-11e5-9e90-43b0cc634cbc.png
 
-Some IDE's have more components than this. Here is the screenshot of Emacs as I am writing this book.
+Some IDEs have more components. Here is the screenshot of Emacs as I am writing this book:
 
 ![alt emacs][emacs]
 
 [emacs]: https://cloud.githubusercontent.com/assets/4463796/8724469/7b6c6b7a-2bed-11e5-8b7c-3017244a8c1a.png
 
-Pretty neat, huh? Since it is completely distraction less, You can visually concentrate on getting things done :D
+Pretty neat, huh? Since it is completely distraction-less, you can visually concentrate on getting things done. :D
 
 
 ## Buffers
 
-Most IDE's use tabs to hold files when a file is opened. One serious disadvantage is it doesn't scale well. If You open more than 10 files, the bar that shows file names will get clogged. It becomes quite difficult to switch between files.
+Most IDEs use tabs to hold files when a file is opened. One serious disadvantage is that it doesn't scale well. If you open more than ten files, the bar that shows file names will get clogged. It becomes quite difficult to switch between files.
 
-Emacs uses something called "buffer" to hold files/text. Every time a file is opened or a process is started, a buffer is used to hold text. Buffers can scale to very large extent. You can open thousands of files and You can switch to any file with just few key presses.
+Emacs uses something called "buffers" to hold files/text. Every time a file is opened or a process is started, a buffer is used to hold text. Buffers can scale to a very large extent. You can open thousands of files and you can switch to any file with just a few key presses.
 
 
 ## Extensibility
 
-Extensibility lies at the heart of Emacs. What I mean by extensibility is
+Extensibility lies at the heart of Emacs. What I mean by extensibility is:
 
-* End user should be able to change any piece of editor
-* Editor should have the ability to add new functionality, without affecting its internal structure and data flow
+* The end user should be able to change any piece of editor.
+* The editor should have the ability to add new functionality, without affecting its internal structure and data flow.
 
-For example, most editors have fuzzy search to find files in a project. Fuzzy search is awesome. If You have several projects, it would be great if You could fuzzy search project names also. If You are not using Emacs, try to implement this in Your editor and see how it goes.
+For example, most editors have fuzzy search to find files in a project. Fuzzy search is awesome. If you have several projects, it would be great if you could fuzzy search project names also. If you are not using Emacs, try to implement this in your editor and see how it goes.
 
-In Emacs, it is as easy as calling an existing function with a different variable. Same thing applies to most other features also. With few lines of code, You can customize/extend any piece of it the way You want it. 
+In Emacs, it is as easy as calling an existing function with a different variable. The same thing applies to most features. With a few lines of code, you can customize or extend any piece of it the way you want.
 
 
 ## Composability
 
-Composability refers to inter-relationships of components. In Emacs, every component can be selected and assembled in various combinations as per user requirements.
+Composability refers to the inter-relationships of components. In Emacs, every component can be selected and assembled in various combinations according to user requirements.
 
-If we take previous example of fuzzy search, most editors combine two pieces to achieve it. They combine `fuzzy search` code with `open file` code. So You can `search` for a file and then press enter, it `opens` the file. Now after searching for a file, instead of `opening` the file, lets say You have to `rename` it or `delete` it. Its not possible.
+Take the previous example of fuzzy search. Most editors combine two pieces to achieve it. They combine their `fuzzy search` code with their `open file` code. You can `search` for a file, press enter, and `open` the file. After searching for a file, instead of `opening` the file, what if you want to `rename` or `delete` it? It's often impossible.
 
-In Emacs, once You `searched` for a file, You can perform any action on it. You can open it, rename it, delete it or You can define Your own function to do something else.
+In Emacs, once you `search` for a file, you can perform any action on it. You can open it, rename it, or delete it, or you can define your own function to do something else.
 
-This composability helps a lot to either modify existing features or define new features with very few lines of code.
+This composability allows you to either modify existing features or define new features with very few lines of code.
 
 
 ## DWIM
@@ -258,7 +241,7 @@ Eventhough Emacs is commonly known as text editor, it is somewhat misleading. Em
 * Web server
 * Lisp Interpreter
 * SQL client
-* Writing & Debugging code 
+* Writing & Debugging code
 
 and thousands of other things.
 
@@ -308,7 +291,7 @@ By using Emacs I will be able to access any file in the operating system with ve
 Since Emacs acts as an interface, the entire power of Emacs will be available for any task.
 
 
-These are just a few examples. You can checkout wide variety of packages available for various things for more. 
+These are just a few examples. You can checkout wide variety of packages available for various things for more.
 
 
 # Escaping Meta Alt Control Shift
@@ -341,7 +324,7 @@ Lets look at some common situations where we use shift most and how to avoid it 
 #### Special characters:
 
 The usage of symbols is more than that of numbers in programming(atleast for me). If You are using Emacs for programming, there is a snippet to interchange symbols and numbers. By this number of times to press shift will be reduced a lot.
-    
+
 #### Capitalize Words
 
 If You are writing a book or documenting something, You need to capitalize words after a sentence/paragraph, always capitilize few characters/words e.t.c. You can use auto capitalize package mode which automatically does that for You.
@@ -415,7 +398,7 @@ You can define Your own commands which does selection narrowing on any items You
 ## Level 3: Singularity
 
 > `Emacs singularity` is a hypothetical function, which is capable of doing anything!!
- 
+
 Singularity is a higher order of selection narrowing. In previous section, I have used selection narrowing for one set of options. To take if further, I can do selection narrowing on anything(buffers, files, commands, dirs, bookmarks).
 
 selected one command & I have used selection narrowing for the argument. In addition to arguments, I can even do selection narrowing on commands. In addition to performing selection narrowing individually on arguments or commands, I can do selection narrowing on a combination of command & argument. This is where singularity comes into picture.
@@ -453,7 +436,7 @@ If I want to go to a file called `test.py` in some project, I have to run `fj <f
 
 If I want to install a package in Emacs, I have to run `fj ins <package-name>`(no need to type `package-install` as I am using selection narrowing). Commands will be narrowed down to `package-install` after typing `ins`.
 
-Since singularity is capable of interacting with large set of options, it becomes much easier to interact with Emacs with very very few keys. 
+Since singularity is capable of interacting with large set of options, it becomes much easier to interact with Emacs with very very few keys.
 
 
 
@@ -477,7 +460,7 @@ They made an arrangement to where they would tie a person's feet, so that when h
 
 She looked on the other side and was delighted at what she saw(lisp enlightment), and smiled. Those standing below grew curious to question her and pulled her back, but to their great disappointment she had lost the power of speech.
 
-"Those who have seen cannot say. That which has been seen cannot be painted, cannot be reduced to words. But still each one has to give a try - and the world goes on becoming more and more beautiful because of these efforts." 
+"Those who have seen cannot say. That which has been seen cannot be painted, cannot be reduced to words. But still each one has to give a try - and the world goes on becoming more and more beautiful because of these efforts."
 
 
 Happy Emacsing & Lisping!!
