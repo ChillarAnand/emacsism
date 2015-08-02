@@ -43,11 +43,11 @@ Explaining how to use Emacs itself is beyond the scope of this book.
 
 ## About Emacs
 
-If you are a programmer and if you are looking for software with features such as syntax highlighting, autocompletion, and debuggers to help you write and execute code, you can stop here and go for an IDE.
+If you are a programmer and looking for software readily setup with features such as syntax highlighting, auto-completion, and debuggers to help you write and execute code, then you can stop here and go for an IDE.
 
-If you are not satisfied with that, if you need something much simpler yet more powerful than IDEs, and if you are looking for a divine editing experience, Emacs might help you!
+But if you are not satisfied with that and need to start with something much simpler yet more powerful than an IDE, and if you are seeking a divine editing experience, then Emacs might be what you need!
 
-I see Emacs as an inward spiral. Once you start learning Emacs and realizing the power of Emacs, you start spending more and more time within Emacs. It gets impossible to get out of Emacs. You have been warned!
+I see Emacs as an inward spiral. Once you start learning and realizing the power of Emacs, you will start spending more and more time within Emacs. You will run out of reasons to get out of Emacs. You have been warned!
 
 
 ## About Book
