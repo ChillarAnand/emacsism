@@ -58,78 +58,6 @@ I am neither a professional writer nor an expert in Emacs. I've just tried to pu
 
 
 
-# Lisp
-
-Emacs is written in a programming language called Emacs Lisp, a variant of Lisp. There have been attempts to port Emacs to other languages, but none of them have been successful because those programming languages weren't as powerful as Lisp, thereby losing all the power of Emacs. Before diving into Emacs, it is good to have a brief introduction to Lisp features to see how it differs from traditional languages like C, Python, or Perl.
-
-
-## Expressions
-
-Lisp is an expression-oriented programming language, which means almost everything is an expression. "Hello world" in Lisp looks like this:
-
-```commonlisp
-(message "Hello, World!")
-```
-
-To add `x` and the higher value of either `y` or `z`, we can use a **single** expression to do it.
-
-```commonlisp
-(if (> y z) (+ x y) (+ x z))
-```
-
-That might look bit odd because Lisp uses prefix notation. What's more
-interesting is, in Lisp, it is possible to compose the same expression in
-many ways. The expression above can also be written as:
-
-```commonlisp
-(+ x (if (> y z) y z))
-```
-
-That's because `(if ...)` is an expression, and it can be used inside other expressions.
-
-By making everything an expression, Lisp expands the possibilites for combining the parts of the language in unusual ways.
-
-
-## Evaluation
-
-The syntax is the set of rules which define the combinations of symbols that are considered to be a correctly structured document. Programming languages like C and Python and markup languages like HTML, XML, and TeX have their own syntax.
-
-Lisp has hardly any syntax at all. Everything is an expression. Every expression can be evaluated. If you don't want it evaluated, add a quote to it. That's it.
-
-
-## Availability
-
-Traditional programming language have read-time, compile-time, and runtime. In Lisp, the whole language is always available. There is no real distinction between read-time, compile-time, and runtime. You can compile or run code while reading, read or run code while compiling, and read or compile code at runtime.
-
-
-## Extensibility
-
-A macro is a piece of code that treats code as data and generates new code. Macros are used by the compiler to generate code that will be compiled just before its evaluation. Most programming languages are not capable of this manipulation, or advise against using this technique. For example, consider a simple macro in the C language:
-
-```c
-#define square(x)      x*x
-```
-
-It is almost impossible to get it work across all the different contexts where it could be called. It is also difficult (or even impossible) to modify the language itself in order to add new syntax. You would need to modify the grammar and the abstract syntax tree, and then recompile to get new syntax.
-
-Lisp makes it easy to write reliable macros that can be used in different situations. People sometimes simplify their code by adding new features to Lisp through macros.
-
-These features set Lisp apart from traditional languages.
-
-
-### References
-
-http://gigamonkeys.com/book/
-
-http://www.paulgraham.com/diff.html
-
-http://practicaltypography.com/why-racket-why-lisp.html
-
-
-
-
-
-
 # Why Emacs?
 
 In this chapter, let's compare Emacs with other editors or IDEs so that we can have better understanding of the fundamental features of Emacs. Note that Emacs is not just a text editor, but an extensible computing environment.
@@ -438,6 +366,79 @@ If I want to install a package in Emacs, I have to run `fj ins <package-name>`(n
 
 Since singularity is capable of interacting with large set of options, it becomes much easier to interact with Emacs with very very few keys.
 
+
+
+
+
+
+
+
+# Lisp
+
+Emacs is written in a programming language called Emacs Lisp, a variant of Lisp. There have been attempts to port Emacs to other languages, but none of them have been successful because those programming languages weren't as powerful as Lisp, thereby losing all the power of Emacs. Before diving into Emacs, it is good to have a brief introduction to Lisp features to see how it differs from traditional languages like C, Python, or Perl.
+
+
+## Expressions
+
+Lisp is an expression-oriented programming language, which means almost everything is an expression. "Hello world" in Lisp looks like this:
+
+```commonlisp
+(message "Hello, World!")
+```
+
+To add `x` and the higher value of either `y` or `z`, we can use a **single** expression to do it.
+
+```commonlisp
+(if (> y z) (+ x y) (+ x z))
+```
+
+That might look bit odd because Lisp uses prefix notation. What's more
+interesting is, in Lisp, it is possible to compose the same expression in
+many ways. The expression above can also be written as:
+
+```commonlisp
+(+ x (if (> y z) y z))
+```
+
+That's because `(if ...)` is an expression, and it can be used inside other expressions.
+
+By making everything an expression, Lisp expands the possibilites for combining the parts of the language in unusual ways.
+
+
+## Evaluation
+
+The syntax is the set of rules which define the combinations of symbols that are considered to be a correctly structured document. Programming languages like C and Python and markup languages like HTML, XML, and TeX have their own syntax.
+
+Lisp has hardly any syntax at all. Everything is an expression. Every expression can be evaluated. If you don't want it evaluated, add a quote to it. That's it.
+
+
+## Availability
+
+Traditional programming language have read-time, compile-time, and runtime. In Lisp, the whole language is always available. There is no real distinction between read-time, compile-time, and runtime. You can compile or run code while reading, read or run code while compiling, and read or compile code at runtime.
+
+
+## Extensibility
+
+A macro is a piece of code that treats code as data and generates new code. Macros are used by the compiler to generate code that will be compiled just before its evaluation. Most programming languages are not capable of this manipulation, or advise against using this technique. For example, consider a simple macro in the C language:
+
+```c
+#define square(x)      x*x
+```
+
+It is almost impossible to get it work across all the different contexts where it could be called. It is also difficult (or even impossible) to modify the language itself in order to add new syntax. You would need to modify the grammar and the abstract syntax tree, and then recompile to get new syntax.
+
+Lisp makes it easy to write reliable macros that can be used in different situations. People sometimes simplify their code by adding new features to Lisp through macros.
+
+These features set Lisp apart from traditional languages.
+
+
+### References
+
+http://gigamonkeys.com/book/
+
+http://www.paulgraham.com/diff.html
+
+http://practicaltypography.com/why-racket-why-lisp.html
 
 
 
