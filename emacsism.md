@@ -183,6 +183,18 @@ I think comparing both of them is kind of stupid. If we want to compare two thin
 
 
 
+# How to start Emacs?
+
+## Installation
+
+## The safe word or how to quit
+
+## The unconventional but powerful interface
+
+## Plugins are Packages but more
+
+
+
 
 
 
@@ -370,15 +382,26 @@ Since singularity is capable of interacting with large set of options, it become
 
 
 
+# Programming in Emacs
+
+## Python Programmer Setup
+
+## C Programmer Setup
+
+## Web Developer Setup
 
 
 
-# Lisp
+
+# Learning to speak Emacs Lisp
+
+
+## Lisp
 
 Emacs is written in a programming language called Emacs Lisp, a variant of Lisp. There have been attempts to port Emacs to other languages, but none of them have been successful because those programming languages weren't as powerful as Lisp, thereby losing all the power of Emacs. Before diving into Emacs, it is good to have a brief introduction to Lisp features to see how it differs from traditional languages like C, Python, or Perl.
 
 
-## Expressions
+### Expressions
 
 Lisp is an expression-oriented programming language, which means almost everything is an expression. "Hello world" in Lisp looks like this:
 
@@ -405,19 +428,19 @@ That's because `(if ...)` is an expression, and it can be used inside other expr
 By making everything an expression, Lisp expands the possibilites for combining the parts of the language in unusual ways.
 
 
-## Evaluation
+### Evaluation
 
 The syntax is the set of rules which define the combinations of symbols that are considered to be a correctly structured document. Programming languages like C and Python and markup languages like HTML, XML, and TeX have their own syntax.
 
 Lisp has hardly any syntax at all. Everything is an expression. Every expression can be evaluated. If you don't want it evaluated, add a quote to it. That's it.
 
 
-## Availability
+### Availability
 
 Traditional programming language have read-time, compile-time, and runtime. In Lisp, the whole language is always available. There is no real distinction between read-time, compile-time, and runtime. You can compile or run code while reading, read or run code while compiling, and read or compile code at runtime.
 
 
-## Extensibility
+### Extensibility
 
 A macro is a piece of code that treats code as data and generates new code. Macros are used by the compiler to generate code that will be compiled just before its evaluation. Most programming languages are not capable of this manipulation, or advise against using this technique. For example, consider a simple macro in the C language:
 
@@ -432,7 +455,7 @@ Lisp makes it easy to write reliable macros that can be used in different situat
 These features set Lisp apart from traditional languages.
 
 
-### References
+#### References
 
 http://gigamonkeys.com/book/
 
