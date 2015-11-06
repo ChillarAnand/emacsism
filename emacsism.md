@@ -1,12 +1,8 @@
-
-
-
-
 # Prologue
 
-Emacs was originally written in 1976. It has been almost 60 years since it came into the picture, and yet none of the latest and most advanced software have been able to replace it.
+Emacs was originally written in 1976. It has been almost 40 years since it came into the picture, and yet none of the latest and most advanced software have been able to replace it.
 
-There is something magnificient about Emacs that draws people to use it, develop it further, and form a cult around it throughout all these years. It is one of the longest lived programming applications in the history of computers.
+There is something magnificient about Emacs that draws people to use it, develop it further, and form a cult around it throughout all these years. It is one of the longest living programming applications in the history of computers.
 
 You might have read a lot of flattery about Emacs. If you try and learn Emacs for a while (maybe few weeks to few months), you will realize that the flattery is actually true. Everything you have read is much less than the actual capabilities of Emacs.
 
