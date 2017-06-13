@@ -224,22 +224,21 @@ These are just a few examples. You can checkout wide variety of packages availab
 
 > Emacsism: Emacs stands for "Escaping Meta Alt Control Shift."
 
-One of major problems with Emacs is that users need to use modifier keys[Shift, Ctrl,  Alt/Meta, Super] repetetively. If we look at the key board laYout, `Ctrl` is placed at the corners. `Ctrl` is the most used modifier key in Emacs. Everytime we  need to press it, we have to stretch our little finger all the way to the corner or move the hand, both of them are not ergonomic/convinient.
+One of major problems with Emacs is that users need to use modifier keys[Shift, Ctrl,  Alt/Meta, Super] repetetively. If we look at the key board layout, these keys are placed at extreme right and left. To use a modifier key, we have to use pinky and need to stretch it or move the hand which are not ergonomic/convinient.
 
-To avoid that problem, it is a customary practice to bind caps lock to ctrl. this solves the problem to an extent. If I have to press `C-c C-e`, I have to hold `caps lock` with little finger, and then press `c` & `e` with any remaining fingers. An alternate solution is to use `right control key` with right little finger and press `c` & `e` which takes back to the previous problem.
-
-Also if we look at strength of our fingers, thumb stands and the top, little finger at bottom and remaining fingers somewhere in the middle. So binding caps lock to control doesn't solve the problem ergonomically.
 
 ### Escaping Ctrl
 
-One of the best solution for this problem is using `space` as `space` and `ctrl`. For Ubuntu, there is a package called [space2ctrl]()[^1] that modifies space to act as
+`Ctrl` key is located at bottom corners and is hard to reach. To avoid using it, users often bind caps lock to ctrl. This reduces little stretching. Still you have to use pinky everytime. If I have to press `C-x C-s`, I have to hold `caps lock` with left pinky and then press `x` & `s` with remaining fingers which is inconvinient. An alternate solution is to use right `ctrl` with pinky and press `x` & `s` with left hand which leads to the original problem.
 
-* Space if You press it and leave
-* Ctrl if You press and hold it.
+Also if we look at strength of our fingers, thumb stands at the top, pinky at bottom and remaining fingers somewhere in the middle. So binding caps lock to ctrl doesn't solve the problem ergonomically.
 
-This might seem bizzare at first but once You get used to the idea, it will be very useful. Once You do this, there is no need to touch ctrl key in Your life time.
+The best alternative is to use `space` as `space` and `ctrl`. If you press and leave space, it will act as space. If you hold it longer, it is equivalent to holding ctrl.
 
-[^1]:
+This might feel bizzare at first. Once you get used to it, you will never go back and you don't have to worry about pinky pains.
+
+To modify space, there is a package called `xcape` for linux. You can use [this script](https://github.com/ChillarAnand/01/blob/master/ubuntu/bin/xcape.sh) for it.
+
 
 ### Escaping Shift
 
@@ -247,35 +246,36 @@ Lets look at some common situations where we use shift most and how to avoid it 
 
 #### Special characters:
 
-The usage of symbols is more than that of numbers in programming(atleast for me). If You are using Emacs for programming, there is a snippet to interchange symbols and numbers. By this number of times to press shift will be reduced a lot.
+You can track keyboard usage with tools like [WhatPulse](https://whatpulse.org/). If usage of symbols is more than that of numbers, you can interchange keys and symbols.
 
-#### Capitalize Words
+#### Casing
 
-If You are writing a book or documenting something, You need to capitalize words after a sentence/paragraph, always capitilize few characters/words e.t.c. You can use auto capitalize package mode which automatically does that for You.
+If You are writing a book or documenting something, You need to capitalize words after a sentence/paragraph, always capitilize few characters/words e.t.c. You can use [auto-capitalize](https://www.emacswiki.org/emacs/auto-capitalize.el) package mode which automatically does that for You.
 
-#### Casing Words
+Based on the programming language, You have to case the identifiers(as per language - snake case for python, camel case for java, capitalized keywords for SQL). Emacs has a package called [electric-case](https://github.com/zk-phi/electric-case) which automatically does that for You. If You are using Emacs for SQL database access, there is a package called sql-up mode, which automatically upcases SQL keywords.
 
-Based on the programming language, You have to case the identifiers(as per language - snake case for python, camel case for java, capitalized keywords for SQL). Emacs has a package called electric-case which automatically does that for You. If You are using Emacs for SQL database access, there is a package called sql-up mode, which automatically upcases SQL keywords.
-
-You can find many other packages based on Your requirements.
+This reduces shift usage to a great extent.
 
 ### Escaping Meta/Alt
 
-I don't see any problem with using meta since I am using thumb to press it. However if You are willing to rebind, You can do it. Most of the times meta is used only to invoke `M-x`. There is a package called [key-chord](http://www.Emacswiki.org/Emacs/key-chord.el)[^1] which lets You to rebind any key combination to any two keys pressed automatically. So You can rebind `M-x` to `m-x`.
+Alt key is not a big deal as we use thumb to press it. However if You are willing to rebind, You can do it. Most of the times meta is used only to invoke `M-x`. There is a package called [key-chord](http://www.Emacswiki.org/Emacs/key-chord.el)[^1] which lets You to rebind any key combination to any two keys pressed automatically. So You can rebind `M-x` to `mx`.
 
-I do recommend using key-chord, to rebind most used key bindings. It saves a lot of key presses, instead of typing `C-c C-p r` everytime, You can just press `p-r`(or any other keys which feel intuitive for You).
+I do recommend using key-chord, to rebind most used key bindings. It saves a lot of key presses. For example, instead of typing `C-c C-p r` everytime, You can just bind it to `pr`.
+
+### Escaping Other Modifiers
+
+We don't have to worry about enter, tab and backspace keys as default emacs bindings `C-m`, `C-i`, `C-d` do the appropriate job.
 
 
-Whatever I have explained so far is Emacs part of less-keys project. Less-keys is a project I have started to minimize the number of keys and key presses to interact with computer to overcome RSI.
+All these key modification we were dicussing will work in terminal also once you set editing mode as emacs. To set mode in terminal use
+
+```sh
+set -o emacs
+```
+
+Once you get used to this, you can use emacs and terminal with just alphabets, special symbols and space key without worrying about modifier keys.
 
 [^1]: http://www.Emacswiki.org/Emacs/key-chord.el
-
-
-
-
-
-
-
 
 
 
