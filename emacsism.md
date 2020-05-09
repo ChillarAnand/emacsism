@@ -188,7 +188,7 @@ As explained in previous chapter, Emacs can be used for all sorts of things. The
 
 ## 1. Write a python script to update table in MySQL.
 
-**Without Emacs:** For writing Python code, I will be using IDE. Sine I dont know how to update table in MySQL, I have to open browser, go to stackoverflow, search for it and find relevant code. Then I have to open a terminal, create a mysql process and test the query. Once I know that it is working fine, I have to go back to editor and use that query in script.
+**Without Emacs:** For writing Python code, I will be using IDE. Since I dont know how to update table in MySQL, I have to open browser, go to stackoverflow, search for it and find relevant code. Then I have to open a terminal, create a mysql process and test the query. Once I know that it is working fine, I have to go back to editor and use that query in script.
 
 **With Emacs:** Emacs has stackexchange client. So I can search for it in stackoverflow from Emacs. When I get the results, I can select relevant code and then send that directly to MySQL process which is running in Emacs. If that code works, I can switch back to python script and paste it.
 
